@@ -1,0 +1,4 @@
+include ':resources'
+include ':login'
+include ':app'
+rootProject.name = "QSE"
