@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_login_title">Quem sou eu?</string>
+    <string name="login">Entrar</string>
+    <string name="login_generic_error">Erro ao logar</string>
+</resources>
