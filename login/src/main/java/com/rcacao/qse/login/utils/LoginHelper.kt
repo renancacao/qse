@@ -6,7 +6,7 @@ import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.rcacao.qse.R as AppR
+import com.rcacao.qse.login.R
 
 class LoginHelper {
 
@@ -21,7 +21,7 @@ class LoginHelper {
         return AuthUI.getInstance()
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
-            .setTheme(AppR.style.AppTheme)
+            .setTheme(R.style.AppTheme)
             .build()
     }
 
