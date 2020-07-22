@@ -4,14 +4,13 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.snackbar.Snackbar
 import com.rcacao.qse.login.R
 import com.rcacao.qse.login.utils.LoginHelper
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : FullScreenActivity() {
 
     private val loginRequestCode: Int = 0
     private val loginHelper = LoginHelper()
@@ -21,10 +20,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         btLogin.setOnClickListener { login() }
-
     }
 
-    fun login() {
+    private fun login() {
         startActivityForResult(loginHelper.getLoginIntent(), loginRequestCode)
     }
 
@@ -33,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         if (requestCode == loginRequestCode) {
             val response = loginHelper.getLoginResponse(data)
             if (resultCode == Activity.RESULT_OK) {
-                successLogin()
+                onSuccessLogin()
             } else {
                 handleLoginError(response)
             }
@@ -47,8 +45,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun successLogin() {
+    private fun onSuccessLogin() {
         val user = loginHelper.getUser()
         Toast.makeText(this, "logado " + user.toString(), Toast.LENGTH_LONG).show()
     }
+
 }
