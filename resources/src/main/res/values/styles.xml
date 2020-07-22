@@ -7,4 +7,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Button">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:paddingStart">50dp</item>
+        <item name="android:paddingEnd">50dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 </resources>
