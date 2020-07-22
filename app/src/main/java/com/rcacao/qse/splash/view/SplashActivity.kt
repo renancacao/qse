@@ -1,5 +1,6 @@
 package com.rcacao.qse.splash.view
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -7,6 +8,7 @@ import android.widget.Toast
 import com.rcacao.qse.R
 import com.rcacao.qse.core.view.FullScreenActivity
 import com.rcacao.qse.login.view.LoginActivity
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : FullScreenActivity() {
 
@@ -21,8 +23,10 @@ class SplashActivity : FullScreenActivity() {
 
     private fun callLoginActivity() {
         Handler().postDelayed({
+            val options: ActivityOptions =
+                ActivityOptions.makeSceneTransitionAnimation(this, splashTextTitle, "title")
             val intent = Intent(this, LoginActivity::class.java)
-            startActivityForResult(intent, loginRequestCode)
+            startActivityForResult(intent, loginRequestCode, options.toBundle())
         }, 2000)
     }
 

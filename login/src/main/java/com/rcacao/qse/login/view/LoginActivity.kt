@@ -59,6 +59,11 @@ class LoginActivity : FullScreenActivity() {
         finish()
     }
 
+    override fun onBackPressed() {
+        setResult(Activity.RESULT_CANCELED)
+        finish()
+    }
+
     companion object {
         const val USER_LOGGED: Int = 1
     }
