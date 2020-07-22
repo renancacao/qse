@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import com.rcacao.qse.R
-import com.rcacao.qse.login.view.FullScreenActivity
+import com.rcacao.qse.core.view.FullScreenActivity
 import com.rcacao.qse.login.view.LoginActivity
 
 class SplashActivity : FullScreenActivity() {

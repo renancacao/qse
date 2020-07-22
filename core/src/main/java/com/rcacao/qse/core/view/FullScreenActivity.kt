@@ -1,4 +1,4 @@
-package com.rcacao.qse.resources.view
+package com.rcacao.qse.core.view
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
