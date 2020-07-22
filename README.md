@@ -10,5 +10,6 @@ O que há nesse repositório?
 - Firebase Auth
 
 - Snackbar
+- SceneTransitionAnimation
 
 - Detekt (Projeto Geral/Modulo)

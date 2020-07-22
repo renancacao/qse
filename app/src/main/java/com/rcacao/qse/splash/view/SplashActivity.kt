@@ -24,7 +24,11 @@ class SplashActivity : FullScreenActivity() {
     private fun callLoginActivity() {
         Handler().postDelayed({
             val options: ActivityOptions =
-                ActivityOptions.makeSceneTransitionAnimation(this, splashTextTitle, "title")
+                ActivityOptions.makeSceneTransitionAnimation(
+                    this,
+                    splashTextTitle,
+                    splashTextTitle.transitionName
+                )
             val intent = Intent(this, LoginActivity::class.java)
             startActivityForResult(intent, loginRequestCode, options.toBundle())
         }, 2000)
