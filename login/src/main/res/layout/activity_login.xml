@@ -29,7 +29,7 @@
             android:id="@+id/btLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@color/colorPrimary"
             android:paddingStart="50dp"
             android:paddingEnd="50dp"
             android:text="@string/login"
