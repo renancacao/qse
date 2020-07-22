@@ -3,7 +3,6 @@ package com.rcacao.qse.login.view
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.snackbar.Snackbar
 import com.rcacao.qse.login.R
@@ -18,11 +17,12 @@ class LoginActivity : FullScreenActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        btLogin.setOnClickListener { login() }
 
         if (loginHelper.getUser() != null) {
             onSuccessLogin()
         }
+
+        btLogin.setOnClickListener { login() }
     }
 
     private fun login() {
@@ -49,8 +49,12 @@ class LoginActivity : FullScreenActivity() {
     }
 
     private fun onSuccessLogin() {
-        val user = loginHelper.getUser()
-        Toast.makeText(this, "logado " + user.toString(), Toast.LENGTH_LONG).show()
+        setResult(USER_LOGGED)
+        finish()
+    }
+
+    companion object {
+        const val USER_LOGGED: Int = 1
     }
 
 }
