@@ -5,6 +5,8 @@ O que há nesse repositório?
 
 - Modularização
 
+- Dagger-Hilt
+
 - Firebase Auth
 
 - Snackbar

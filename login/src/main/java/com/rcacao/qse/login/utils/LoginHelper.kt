@@ -7,8 +7,9 @@ import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.rcacao.qse.login.R
+import javax.inject.Inject
 
-class LoginHelper {
+class LoginHelper @Inject constructor() {
 
     fun getLoginIntent(): Intent {
 

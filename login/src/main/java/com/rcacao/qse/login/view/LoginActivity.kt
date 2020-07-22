@@ -5,14 +5,20 @@ import android.content.Intent
 import android.os.Bundle
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.snackbar.Snackbar
+import com.rcacao.qse.core.view.FullScreenActivity
 import com.rcacao.qse.login.R
 import com.rcacao.qse.login.utils.LoginHelper
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_login.*
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginActivity : FullScreenActivity() {
 
     private val loginRequestCode: Int = 0
-    private val loginHelper = LoginHelper()
+
+    @Inject
+    lateinit var loginHelper: LoginHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
