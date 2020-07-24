@@ -16,6 +16,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_splash.*
 import javax.inject.Inject
 
+const val DELAY_TIME: Long = 2000
+
 @AndroidEntryPoint
 class SplashActivity : FullScreenActivity() {
 
@@ -53,7 +55,7 @@ class SplashActivity : FullScreenActivity() {
     private fun waitAndInit() {
         Handler().postDelayed({
             viewModel.isLogged()
-        }, 2000)
+        }, DELAY_TIME)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

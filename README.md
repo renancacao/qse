@@ -6,12 +6,12 @@ O que há nesse repositório?
 - Modularização
 
 - Dagger-Hilt multi modules
-- ViewModel KTX (viewmodelScope)
-- Fragment KTX (by viewmodels())
+- ViewModel KTX (viewModelScope)
+- Fragment KTX (by viewModels())
 
 - Firebase Auth
 
-- Snackbar
+- SnackBar
 - SceneTransitionAnimation
 
 - Detekt (Projeto Geral/Modulo)

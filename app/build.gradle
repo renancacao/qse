@@ -50,7 +50,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //viewmodel ktx
+    //viewModel ktx
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
     //fragment KTX
