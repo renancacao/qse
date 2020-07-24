@@ -18,7 +18,7 @@ class SplashViewModel @ViewModelInject constructor(private val getUserUseCase: G
     val event: LiveData<Event<SplashUiEvent>>
         get() = mutableEvent
 
-    fun hasUser() {
+    fun isLogged() {
         viewModelScope.launch {
             when (getUserUseCase()) {
                 is DataResult.Success -> mutableEvent.value = Event(SplashUiEvent.UserFound)

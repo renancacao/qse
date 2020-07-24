@@ -52,7 +52,7 @@ class SplashActivity : FullScreenActivity() {
 
     private fun waitAndInit() {
         Handler().postDelayed({
-            viewModel.hasUser()
+            viewModel.isLogged()
         }, 2000)
     }
 
