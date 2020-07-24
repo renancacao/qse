@@ -3,7 +3,7 @@ package com.rcacao.qse.login.view.ui
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.firebase.ui.auth.IdpResponse
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.rcacao.qse.core.view.FullScreenActivity
 import com.rcacao.qse.login.R
@@ -33,20 +33,17 @@ class LoginActivity : FullScreenActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == loginRequestCode) {
-            val response = loginHelper.getAuthUiResponse(data)
             if (resultCode == Activity.RESULT_OK) {
                 onSuccessLogin()
             } else {
-                handleLoginError(response)
+                showErrorMessage(loginHelper.getErrorMessage(data))
             }
         }
     }
 
-    private fun handleLoginError(response: IdpResponse?) {
-        if (response != null) {
-            val message = response.error?.message ?: getString(R.string.login_generic_error)
-            Snackbar.make(contextView, message, Snackbar.LENGTH_LONG).show()
-        }
+    private fun showErrorMessage(errorMessage: String?) {
+        val message = errorMessage ?: getString(R.string.login_generic_error)
+        Snackbar.make(contextView, message, Snackbar.LENGTH_LONG).show()
     }
 
     private fun onSuccessLogin() {

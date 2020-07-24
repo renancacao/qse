@@ -5,9 +5,9 @@ O que há nesse repositório?
 
 - Modularização
 
-- Dagger-Hilt
-- ViewModel KTX
-- Fragment KTX
+- Dagger-Hilt multi modules
+- ViewModel KTX (viewmodelScope)
+- Fragment KTX (by viewmodels())
 
 - Firebase Auth
 

@@ -10,8 +10,9 @@ import com.rcacao.qse.core.data.Event
 import com.rcacao.qse.login.domain.GetUserUseCase
 import com.rcacao.qse.splash.view.SplashUiEvent
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SplashViewModel @ViewModelInject constructor(private val getUserUseCase: GetUserUseCase) :
+open class SplashViewModel @ViewModelInject @Inject constructor(private val getUserUseCase: GetUserUseCase) :
     ViewModel() {
 
     private val mutableEvent = MutableLiveData<Event<SplashUiEvent>>()

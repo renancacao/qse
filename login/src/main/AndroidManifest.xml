@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rcacao.qse.login">
 
-    <application android:name=".LoginApplication">
+    <application>
         <activity android:name=".view.ui.LoginActivity" />
     </application>
 

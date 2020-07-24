@@ -1,8 +1,7 @@
-package com.rcacao.qse.login
+package com.rcacao.qse
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class LoginApplication : Application() {
-}
+class AppApplication : Application()

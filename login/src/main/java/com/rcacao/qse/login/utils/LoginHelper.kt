@@ -39,9 +39,12 @@ class LoginHelper @Inject constructor() {
         activity.startActivityForResult(intent, requestCode, options.toBundle())
     }
 
-    fun getAuthUiResponse(data: Intent?): IdpResponse? = IdpResponse.fromResultIntent(data)
-
     fun logout(context: Context) {
         AuthUI.getInstance().signOut(context)
+    }
+
+    fun getErrorMessage(data: Intent?): String? {
+        val response = IdpResponse.fromResultIntent(data)
+        return response?.error?.message
     }
 }
