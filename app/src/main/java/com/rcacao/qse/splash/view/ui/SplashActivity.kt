@@ -1,4 +1,4 @@
-package com.rcacao.qse.splash.view
+package com.rcacao.qse.splash.view.ui
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -8,8 +8,10 @@ import android.widget.Toast
 import com.rcacao.qse.R
 import com.rcacao.qse.core.view.FullScreenActivity
 import com.rcacao.qse.login.view.ui.LoginActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_splash.*
 
+@AndroidEntryPoint
 class SplashActivity : FullScreenActivity() {
 
     private val loginRequestCode: Int = 0
