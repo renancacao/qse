@@ -6,6 +6,8 @@ O que há nesse repositório?
 - Modularização
 
 - Dagger-Hilt
+- ViewModel KTX
+- Fragment KTX
 
 - Firebase Auth
 

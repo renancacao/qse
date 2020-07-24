@@ -1,4 +1,5 @@
 <resources>
     <string name="login">Entrar</string>
     <string name="login_generic_error">Erro ao logar</string>
+    <string name="login_transition_name">login_title</string>
 </resources>
