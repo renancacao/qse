@@ -1,4 +1,4 @@
-package com.rcacao.qse.login.view
+package com.rcacao.qse.login.view.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -23,22 +23,17 @@ class LoginActivity : FullScreenActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        if (loginHelper.getUser() != null) {
-            onSuccessLogin()
-        }
-
         btLogin.setOnClickListener { login() }
     }
 
     private fun login() {
-        startActivityForResult(loginHelper.getLoginIntent(), loginRequestCode)
+        startActivityForResult(loginHelper.getAuthUiIntent(), loginRequestCode)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == loginRequestCode) {
-            val response = loginHelper.getLoginResponse(data)
+            val response = loginHelper.getAuthUiResponse(data)
             if (resultCode == Activity.RESULT_OK) {
                 onSuccessLogin()
             } else {

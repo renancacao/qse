@@ -3,7 +3,7 @@
     package="com.rcacao.qse.login">
 
     <application android:name=".LoginApplication">
-        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.ui.LoginActivity" />
     </application>
 
 </manifest>
