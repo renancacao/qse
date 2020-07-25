@@ -6,6 +6,6 @@ import javax.inject.Inject
 
 class LoginServiceImpl @Inject constructor() : LoginService {
     override fun getUser(): User? {
-        return FirebaseAuth.getInstance().currentUser?.let { User(it.providerId, it.phoneNumber) }
+        return FirebaseAuth.getInstance().currentUser?.let { User(it.uid, it.phoneNumber) }
     }
 }
