@@ -28,9 +28,13 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        btLogin.setOnClickListener { login() }
         return inflater.inflate(R.layout.fragment_login, container, false)
 
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        btLogin.setOnClickListener { login() }
     }
 
     private fun login() {
@@ -57,8 +61,5 @@ class LoginFragment : Fragment() {
 
     }
 
-    companion object {
-        const val USER_LOGGED: Int = 1
-    }
 
 }

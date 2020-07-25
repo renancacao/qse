@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/splash_color" />
+    </item>
+    <!--no futuro será subistituido por um bitmap/png para que atenda api 22 -->
+    <item
+        android:width="100dp"
+        android:height="100dp"
+        android:drawable="@drawable/ic_baseline_live_help_24"
+        android:gravity="center" />
+</layer-list>

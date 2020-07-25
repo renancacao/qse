@@ -8,10 +8,12 @@ O que há nesse repositório?
 - Dagger-Hilt multi modules
 - ViewModel KTX (viewModelScope)
 - Fragment KTX (by viewModels())
+- Navigation (com start dinâmico)
 
 - Firebase Auth
 
 - SnackBar
 - SceneTransitionAnimation
+- Splash via tema
 
 - Detekt (Projeto Geral/Modulo)
