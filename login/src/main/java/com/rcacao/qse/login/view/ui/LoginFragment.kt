@@ -3,26 +3,34 @@ package com.rcacao.qse.login.view.ui
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
-import com.rcacao.qse.core.view.FullScreenActivity
 import com.rcacao.qse.login.R
 import com.rcacao.qse.login.utils.LoginHelper
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_login.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class LoginActivity : FullScreenActivity() {
+class LoginFragment : Fragment() {
 
     private val loginRequestCode: Int = 0
 
     @Inject
     lateinit var loginHelper: LoginHelper
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
         btLogin.setOnClickListener { login() }
+        return inflater.inflate(R.layout.fragment_login, container, false)
+
     }
 
     private fun login() {
@@ -46,13 +54,7 @@ class LoginActivity : FullScreenActivity() {
     }
 
     private fun onSuccessLogin() {
-        setResult(USER_LOGGED)
-        finish()
-    }
 
-    override fun onBackPressed() {
-        setResult(Activity.RESULT_CANCELED)
-        finish()
     }
 
     companion object {
